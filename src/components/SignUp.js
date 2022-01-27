@@ -1,5 +1,7 @@
+import "./SignUp.css";
+
 const SignUp = () => {
-  return <p>Sign Up</p>;
+  return <button className="sign-up-button">Sign Up</button>;
 };
 
 export default SignUp;

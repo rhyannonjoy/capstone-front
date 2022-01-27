@@ -6,11 +6,16 @@ import SignUp from "./components/SignUp.js";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <nav className="nav-bar">
+        <SignIn className="sign-in-button" />
+        <SignUp />
+      </nav>
+      <section className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <SignIn />
-      <SignUp />
+      </section>
+      <footer className="footer-section">
+        ©Ada Developers Academy RJR 2022
+      </footer>
     </div>
   );
 }

@@ -1,10 +1,12 @@
 .App {
-  text-align: center;
+  text-align: right;
 }
 
 .App-logo {
-  height: 80vmin;
+  height: 90vmin;
   pointer-events: none;
+  margin: 10px;
+  padding: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,17 +17,13 @@
 
 .App-header {
   background-color: white;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +33,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.footer-section {
+  background-color: #E8E5E5;
+  font-family: 'Poppins', sans-serif;
+  font-size: large;
+  font-weight: bold;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.nav-bar {
+  background-color: #E8E5E5;
 }
