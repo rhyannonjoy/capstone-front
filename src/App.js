@@ -1,15 +1,15 @@
 import "./App.css";
+import Contact from "./components/Contact.js";
 import description from "./components/description.png";
 import logo from "./components/logo.png";
 import SignIn from "./components/SignIn.js";
-import SignUp from "./components/SignUp.js";
 
 function App() {
   return (
     <div className="App">
       <nav className="nav-bar">
+        <Contact />
         <SignIn className="sign-in-button" />
-        <SignUp />
       </nav>
       <section className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
