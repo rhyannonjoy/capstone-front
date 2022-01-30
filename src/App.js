@@ -1,27 +1,19 @@
-import "./App.css";
-import Contact from "./components/Contact.js";
-import description from "./components/description.png";
-import logo from "./components/logo.png";
-import SignIn from "./components/SignIn.js";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+
+const ContactPage = () => (
+  <div>
+    <h1>CONTACT PAGE</h1>
+  </div>
+);
 
 function App() {
   return (
-    <div className="App">
-      <nav className="nav-bar">
-        <Contact />
-        <SignIn className="sign-in-button" />
-      </nav>
-      <section className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <img
-          src={description}
-          className="App-description"
-          alt="description"
-        ></img>
-      </section>
-      <footer className="footer-section">
-        ©Ada Developers Academy RJR 2022
-      </footer>
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
     </div>
   );
 }
