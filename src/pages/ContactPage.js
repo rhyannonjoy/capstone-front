@@ -1,7 +1,13 @@
+import contact from "../images/contact.png";
+
 const ContactPage = () => {
   return (
     <div>
-      <h1>Tell us how we're doing.</h1>
+      <img
+        src={contact}
+        className="contact-image"
+        alt="tell us how we're doin"
+      ></img>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import "./HomePage.css";
-import description from "../components/description.png";
-import logo from "../components/logo.png";
+import description from "../images/description.png";
+import logo from "../images/logo.png";
 import ContactButton from "../components/ContactButton";
 import SignIn from "../components/SignInButton";
 
