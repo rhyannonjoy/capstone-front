@@ -1,0 +1,10 @@
+.home-button {
+    background-color: whitesmoke;
+    border-radius: 8px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    margin: 2px;
+    padding: 10px;
+}

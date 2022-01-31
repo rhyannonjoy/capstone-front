@@ -1,8 +1,8 @@
 import "./HomePage.css";
 import description from "../images/description.png";
 import logo from "../images/logo.png";
-import ContactButton from "../components/ContactButton";
-import SignIn from "../components/SignInButton";
+import ContactButton from "../components/buttons/ContactButton";
+import SignIn from "../components/buttons/SignInButton";
 
 const HomePage = (props) => {
   return (

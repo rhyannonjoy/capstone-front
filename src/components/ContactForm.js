@@ -1,16 +1,35 @@
+import "./ContactForm.css";
+import SubmitButton from "./buttons/SubmitButton";
+
 const ContactForm = () => {
   return (
-    <div className="contact-form">
+    <div className="contact-form-area">
       <label>Name: </label>
-      <input type="text" name="name" placeholder="Your Name Here"></input>
+      <p></p>
+      <textarea
+        type="text"
+        name="name"
+        placeholder=" Your Name Here"
+      ></textarea>
       <p></p>
       <label>Email:</label>
-      <input type="text" name="email" placeholder="Your Email Here"></input>
+      <p></p>
+      <textarea
+        type="text"
+        name="email"
+        placeholder=" Your Email Here"
+      ></textarea>
       <p></p>
       <label>Message: </label>
-      <input type="text" name="message"></input>
       <p></p>
-      <input type="submit" value="submit"></input>
+      <textarea
+        className="message-box"
+        type="text"
+        name="message"
+        placeholder=" Your Message Here"
+      ></textarea>
+      <p></p>
+      <SubmitButton />
     </div>
   );
 };
