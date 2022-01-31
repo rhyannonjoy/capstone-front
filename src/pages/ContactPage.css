@@ -1,0 +1,15 @@
+.contact-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact-image {
+    display: block;
+    height: 90vmin;
+    pointer-events: none;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
