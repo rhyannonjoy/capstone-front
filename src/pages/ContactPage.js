@@ -1,5 +1,5 @@
 import tell_us from "../images/tell_us.png";
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/forms/ContactForm";
 import "./ContactPage.css";
 import HomeButton from "../components/buttons/HomeButton";
 

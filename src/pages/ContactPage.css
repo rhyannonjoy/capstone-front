@@ -11,7 +11,8 @@
 
 .tell-us-image {
     display: block;
-    height: 90vmin;
+    height: 100vmin;
+    width: 90vmin;
     pointer-events: none;
     margin: 10px;
     margin-left: auto;

@@ -1,0 +1,21 @@
+.contact-form-area {
+    background-color: #E8E5E5;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 30px;
+    height: 70vmin;
+    width: 80vmin;
+}
+
+.email-field {
+    width: 387px;
+}
+
+.message-field {
+    height: 100px;
+    width: 387px;
+}
+
+.name-field {
+    width: 387px;
+}
