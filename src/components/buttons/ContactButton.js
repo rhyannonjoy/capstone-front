@@ -2,12 +2,14 @@ import "./ContactButton.css";
 import { useNavigate } from "react-router-dom";
 
 const ContactButton = (props) => {
-  console.log(props);
-  let history = useNavigate();
+  let navigate = useNavigate();
+
   return (
     <button
       className="contact-button"
-      onClick={() => props.history.push("/contact")}
+      onClick={() => {
+        navigate("/contact");
+      }}
     >
       Contact
     </button>
