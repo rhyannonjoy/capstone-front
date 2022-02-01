@@ -1,5 +1,19 @@
-.submit-form {
+.dashboard-header {
   font-family: 'Poppins', sans-serif;
   font-size: larger;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .nav-bar {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+} */
+
+.submit-form {
+  font-family: 'Poppins', sans-serif;
+  font-size: large;
   font-weight: bold;
 }

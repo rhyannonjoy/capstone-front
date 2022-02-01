@@ -1,17 +1,16 @@
-import HomeButton from "../components/buttons/HomeButton";
+import "./SignInPage.css";
+import ContactButton from "../components/buttons/ContactButton";
 import have_account from "../images/have_account.png";
+import HomeButton from "../components/buttons/HomeButton";
 import need_account from "../images/need_account.png";
 import SignInForm from "../components/forms/SignInForm";
 import SignUpForm from "../components/forms/SignUpForm";
-import "./SignInPage.css";
 
 const SignInPage = () => {
   return (
-    <div>
-      <nav className="nav-bar">
-        <HomeButton />
-      </nav>
-
+    <div className="button-container">
+      <HomeButton />
+      <ContactButton />
       <div className="container">
         <div classname="column">
           <img
@@ -33,12 +32,6 @@ const SignInPage = () => {
             alt="thumbs-up"
           ></img>
         </div>
-      </div>
-
-      <div>
-        <footer className="footer-section">
-          ©Ada Developers Academy RJR 2022
-        </footer>
       </div>
     </div>
   );

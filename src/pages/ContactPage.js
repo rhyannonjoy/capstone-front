@@ -1,14 +1,14 @@
-import tell_us from "../images/tell_us.png";
-import ContactForm from "../components/forms/ContactForm";
 import "./ContactPage.css";
+import ContactForm from "../components/forms/ContactForm";
 import HomeButton from "../components/buttons/HomeButton";
+import SignInButton from "../components/buttons/SignInButton";
+import tell_us from "../images/tell_us.png";
 
 const ContactPage = () => {
   return (
-    <div>
-      <nav className="nav-bar">
-        <HomeButton />
-      </nav>
+    <div className="button-container">
+      <HomeButton />
+      <SignInButton />
       <div className="contact-body">
         <img
           src={tell_us}
@@ -16,11 +16,6 @@ const ContactPage = () => {
           alt="tell us how we're doin"
         ></img>
         <ContactForm />
-      </div>
-      <div>
-        <footer className="footer-section">
-          ©Ada Developers Academy RJR 2022
-        </footer>
       </div>
     </div>
   );

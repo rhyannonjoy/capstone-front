@@ -1,16 +1,14 @@
 import "./HomePage.css";
+import ContactButton from "../components/buttons/ContactButton";
 import description from "../images/description.png";
 import logo from "../images/logo.png";
-import ContactButton from "../components/buttons/ContactButton";
-import SignIn from "../components/buttons/SignInButton";
+import SignInButton from "..//components/buttons/SignInButton";
 
 const HomePage = (props) => {
   return (
     <div className="App">
-      <nav className="nav-bar">
-        <ContactButton />
-        <SignIn className="sign-in-button" />
-      </nav>
+      <ContactButton />
+      <SignInButton />
       <section className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <img
@@ -19,9 +17,6 @@ const HomePage = (props) => {
           alt="description"
         ></img>
       </section>
-      <footer className="footer-section">
-        ©Ada Developers Academy RJR 2022
-      </footer>
     </div>
   );
 };

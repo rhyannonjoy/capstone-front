@@ -10,7 +10,7 @@ const SignInButton = () => {
         navigate("/signin");
       }}
     >
-      Sign In
+      Sign∙In
     </button>
   );
 };

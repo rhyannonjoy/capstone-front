@@ -1,10 +1,16 @@
 .home-button {
-    background-color: whitesmoke;
+    background-color: #E8E5E5;
+    border: 2px solid white;
     border-radius: 8px;
     color: black;
+    cursor: pointer;
     font-family: 'Poppins', sans-serif;
-    font-size: large;
-    font-weight: bold;
-    margin: 2px;
-    padding: 10px;
+    font-size: medium;
+    font-weight: 500;
+    padding: 15px;
+}
+
+.home-button:hover{
+    background-color: #FDE6FF;
+    color: black;
 }
