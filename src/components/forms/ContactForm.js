@@ -3,43 +3,40 @@ import SubmitButton from "../buttons/SubmitButton";
 
 const ContactForm = () => {
   return (
-    <div className="contact-form-area">
-      <form>
-        <label>Name: </label>
-        <p></p>
-        <textarea
-          className="name-field"
+    <div className="contact-form-container">
+      <form className="contact-form">
+        <label>Name:</label>
+        <input
+          className="contact-name-field"
           id="name"
           maxLength="40"
           placeholder=" Your Name Here"
           title="Name"
           type="text"
           required
-        ></textarea>
+        ></input>
         <p></p>
         <label>Email:</label>
-        <p></p>
-        <textarea
-          className="email-field"
+        <input
+          className="contact-email-field"
           id="email"
           maxLength="40"
           placeholder=" Your Email Here"
           title="Email"
           type="text"
           required
-        ></textarea>
+        ></input>
         <p></p>
-        <label>Message: </label>
-        <p></p>
-        <textarea
-          className="message-field"
+        <label>Message:</label>
+        <input
+          className="contact-message-field"
           id="message"
           maxLength="200"
-          placeholder=" Your Message Here (200 Characters Max)"
+          placeholder=" Your Message Here"
           title="Message"
           type="text"
           required
-        ></textarea>
+        ></input>
         <p></p>
         <SubmitButton />
       </form>
