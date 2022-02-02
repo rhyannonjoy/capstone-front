@@ -1,9 +1,19 @@
+.button-container {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  padding: 10px;
+}
+
 .dashboard-header {
+  background-color: greenyellow;
+  border-radius: 20px;;
   font-family: 'Poppins', sans-serif;
-  font-size: larger;
-  font-weight: bold;
+  font-size: x-large;
+  font-weight: 300;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 /* .nav-bar {
@@ -12,8 +22,21 @@
   flex-direction: row;
 } */
 
+.pencil-image {
+  display: block;
+  height: 75px;
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.scribble-image {
+  display: block;
+  height: 75px;
+  width: 100px;
+}
+
 .submit-form {
   font-family: 'Poppins', sans-serif;
   font-size: large;
-  font-weight: bold;
+  font-weight: medium;
 }
