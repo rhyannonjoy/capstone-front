@@ -16,7 +16,9 @@ function App() {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

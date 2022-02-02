@@ -6,10 +6,12 @@ import tell_us from "../images/tell_us.png";
 
 const ContactPage = () => {
   return (
-    <div className="button-container">
-      <HomeButton />
-      <SignInButton />
-      <div className="contact-body">
+    <div>
+      <div className="button-container">
+        <HomeButton />
+        <SignInButton />
+      </div>
+      <div className="contact-page-body">
         <img
           src={tell_us}
           className="tell-us-image"
