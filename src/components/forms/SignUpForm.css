@@ -1,35 +1,67 @@
 .create-account-button {
-    background-color: whitesmoke;
+    background-color: white;
+    border: 2px solid white;
     border-radius: 8px;
     color: black;
+    cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-size: small;
-    font-weight: bold;
-    margin: 2px;
-    padding: 5px;
+    font-weight: medium;
+    padding: 10px;
+}
+
+.create-account-button:hover {
+    background-color: #ffff8a;
+    color: black;
 }
 
 .create-account-header {
-    border: 2px solid;
+    border: 1px solid black;
     border-radius: 20px;
+    box-shadow: -10px 7px 1px #8ffeaf;
     color: black; 
     font-family: 'Poppins', sans-serif;
-    box-shadow: -10px 7px 1px #89fb51;
-    margin: 20px;
+    font-size: 140%;
+    font-weight: 400;
+    margin: 15px;
     padding: 10px;
     text-align: center;
     width: 300px;
 }
 
-.sign-up-form {
-    align-items: center;
-    background-color: #E8E5E5;
+.sign-up-email-field {
+    border: 1px solid black;
     border-radius: 20px;
     font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    width: 270px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.sign-up-password-field {
+    border: 1px solid black;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    width: 270px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.sign-up-form {
+    text-align: center;
+}
+
+.sign-up-form-container {
+    background-color: #E8E5E5;
+    border-radius: 20px;
+    box-shadow: 7px 10px 1px #8ffeaf;
+    font-family: 'Poppins', sans-serif;
     font-size: large;
-    font-weight: bold;
-    height: 250px;
+    font-weight: 400;
+    height: 255px;
     width: 300px;
     margin: 5px;
-    padding: 20px;
+    padding: 15px;
 }

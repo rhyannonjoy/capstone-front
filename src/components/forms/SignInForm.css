@@ -1,34 +1,85 @@
 .forgot-password-button {
-    background-color: whitesmoke;
+    background-color: white;
+    border: 2px solid white;
     border-radius: 8px;
     color: black;
+    cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-size: small;
-    font-weight: bold;
-    margin: 2px;
+    font-weight: medium;
+    padding: 10px;
+}
+
+.forgot-password-button:hover {
+    background-color: #f7c9e7;
+    color: black;
+}
+
+.sign-in-email-field {
+    border: 1px solid black;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    width: 270px;
+    margin: 10px;
     padding: 5px;
 }
 
 .sign-in-form {
-    align-items: center;
-    background-color: #E8E5E5;
+    text-align: center;
+}
+
+.sign-in-password-field {
+    border: 1px solid black;
     border-radius: 20px;
     font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    width: 270px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.sign-in-form-button {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    font-weight: medium;
+    margin-left: 4px;
+    margin-right: 5px;
+    padding: 10px;
+}
+
+.sign-in-form-button:hover {
+    background-color: #9af9e2;
+    color: black;
+}
+
+.sign-in-form-container {
+    background-color: #E8E5E5;
+    border-radius: 20px;
+    box-shadow: -10px 7px 1px #b69efc;
+    font-family: 'Poppins', sans-serif;
     font-size: large;
-    font-weight: bold;
-    height: 250px;
+    font-weight: 400;
+    height: 255px;
     width: 300px;
     margin: 5px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .sign-in-form-header {
-    border: 2px solid;
+    border: 1px solid black;
     border-radius: 20px;
-    box-shadow: 6px 7px 1px #fd9765; 
+    box-shadow: 6px 7px 1px #b69efc; 
     color: black; 
     font-family: 'Poppins', sans-serif;
-    margin: 20px;
+    font-size: 125%;
+    font-weight: 400;
+    margin: 15px;
     padding: 10px;
     text-align: center;
     width: 300px;

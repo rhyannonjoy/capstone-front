@@ -4,24 +4,22 @@ const SignInForm = () => {
   return (
     <div>
       <h3 className="sign-in-form-header">I already have an account</h3>
-      <div className="sign-in-form">
-        <form>
+      <div className="sign-in-form-container">
+        <form className="sign-in-form">
           <label>Email:</label>
-          <p></p>
-          <textarea
+          <input
             className="sign-in-email-field"
             placeholder=" Your Email Here"
-          ></textarea>
+          ></input>
           <p></p>
           <label>Password:</label>
-          <p></p>
-          <textarea
+          <input
             className="sign-in-password-field"
             placeholder=" Your Password Here"
-          ></textarea>
-          <p></p>
+          ></input>
           <p></p>
           <button className="forgot-password-button">Forgot My Password</button>
+          <button className="sign-in-form-button">Sign∙In</button>
         </form>
       </div>
     </div>
