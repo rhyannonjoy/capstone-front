@@ -7,8 +7,10 @@ import SignInButton from "..//components/buttons/SignInButton";
 const HomePage = (props) => {
   return (
     <div className="App">
-      <ContactButton />
-      <SignInButton />
+      <div className="button-container">
+        <ContactButton />
+        <SignInButton />
+      </div>
       <section className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <img

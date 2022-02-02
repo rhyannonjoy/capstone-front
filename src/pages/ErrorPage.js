@@ -7,7 +7,7 @@ import SignInButton from "../components/buttons/SignInButton";
 const ErrorPage = () => {
   return (
     <div>
-      <div className="error-page-button-container">
+      <div className="button-container">
         <ContactButton />
         <HomeButton />
         <SignInButton />
