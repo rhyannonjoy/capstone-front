@@ -7,11 +7,11 @@ import SignInButton from "../components/buttons/SignInButton";
 const ErrorPage = () => {
   return (
     <div>
-      <div className="button-container">
+      <nav className="button-container">
         <ContactButton />
         <HomeButton />
         <SignInButton />
-      </div>
+      </nav>
       <div>
         <img
           src={page_not_found}

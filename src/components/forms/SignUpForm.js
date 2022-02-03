@@ -18,6 +18,7 @@ const SignUpForm = () => {
           <input
             className="sign-up-password-field"
             placeholder=" Your Password Here"
+            type="password"
           ></input>
           <p></p>
           <button className="create-account-button">Create Account</button>

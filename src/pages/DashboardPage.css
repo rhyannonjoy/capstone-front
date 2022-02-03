@@ -6,21 +6,21 @@
 }
 
 .dashboard-header {
-  background-color: greenyellow;
-  border-radius: 20px;;
+  align-items: center;
+  background-color: #bbff99;
+  background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
+  border-radius: 15px;
+  display: flex;
   font-family: 'Poppins', sans-serif;
-  font-size: x-large;
+  font-size: xx-large;
   font-weight: 300;
+  justify-content: center;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1px;
   text-align: center;
 }
-
-/* .nav-bar {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: row;
-} */
 
 .pencil-image {
   display: block;
@@ -33,10 +33,4 @@
   display: block;
   height: 75px;
   width: 100px;
-}
-
-.submit-form {
-  font-family: 'Poppins', sans-serif;
-  font-size: large;
-  font-weight: medium;
 }

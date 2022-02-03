@@ -9,10 +9,10 @@ import SignUpForm from "../components/forms/SignUpForm";
 const SignInPage = () => {
   return (
     <div>
-      <div className="button-container">
+      <nav className="button-container">
         <HomeButton />
         <ContactButton />
-      </div>
+      </nav>
       <div className="container">
         <div classname="column">
           <img

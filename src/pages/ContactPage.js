@@ -7,10 +7,10 @@ import tell_us from "../images/tell_us.png";
 const ContactPage = () => {
   return (
     <div>
-      <div className="button-container">
+      <nav className="button-container">
         <HomeButton />
         <SignInButton />
-      </div>
+      </nav>
       <div className="contact-page-body">
         <img
           src={tell_us}

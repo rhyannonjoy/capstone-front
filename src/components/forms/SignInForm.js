@@ -16,6 +16,7 @@ const SignInForm = () => {
           <input
             className="sign-in-password-field"
             placeholder=" Your Password Here"
+            type="password"
           ></input>
           <p></p>
           <button className="forgot-password-button">Forgot My Password</button>

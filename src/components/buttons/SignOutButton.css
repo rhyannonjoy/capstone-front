@@ -1,0 +1,16 @@
+.sign-out-button {
+    background-color: #E8E5E5;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    padding: 15px;
+}
+
+.sign-out-button:hover{
+    background-color: #fba4a4;
+    color: black;
+}
