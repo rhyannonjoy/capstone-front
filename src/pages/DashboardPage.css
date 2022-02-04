@@ -5,10 +5,28 @@
   padding: 10px;
 }
 
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+  position: static;
+}
+
+.header {
+  grid-area: header;
+}
+
+
 .dashboard-body {
   display: grid;
-  grid-template-rows: auto;
-}
+  grid-gap: 10px;
+  grid-template-columns: 220px 220px 220px;
+  grid-template-areas:
+  "....... header header"
+  "sidebar ....... content";
+} 
 
 
 .dashboard-header {
@@ -35,4 +53,11 @@
   margin-top: 5px;
   margin-left: 20px;
   margin-right: 20px;
+}
+
+.pencil-image {
+  background-color: rebeccapurple;
+  height: 520px;
+  margin-top: 10px;
+  width: 500px;
 }
