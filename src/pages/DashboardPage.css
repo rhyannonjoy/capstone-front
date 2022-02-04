@@ -11,7 +11,9 @@
 
 .content {
   grid-area: content;
-  position: static;
+  border: 2px dashed black;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .header {
@@ -22,7 +24,7 @@
 .dashboard-body {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 220px 220px 220px;
+  grid-template-columns: 220px 220px 840px;
   grid-template-areas:
   "....... header header"
   "sidebar ....... content";
@@ -55,9 +57,9 @@
   margin-right: 20px;
 }
 
-.pencil-image {
+/* .pencil-image {
   background-color: rebeccapurple;
   height: 520px;
   margin-top: 10px;
   width: 500px;
-}
+} */

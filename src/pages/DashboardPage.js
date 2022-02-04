@@ -39,7 +39,7 @@ const DashboardPage = () => {
           <SubmitQuestionForm />
         </div>
         <div className="content">
-          <img src={pencil} className="pencil-image" alt="pencil"></img>
+          {/* <img src={pencil} className="pencil-image" alt="pencil"></img> */}
         </div>
       </div>
     </div>
