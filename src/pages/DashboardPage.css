@@ -10,10 +10,18 @@
 }
 
 .content {
+  /* background-image: url("../images/pencil.png"); */
+  background-color: greenyellow;
   grid-area: content;
-  border: 2px dashed black;
+  /* border: 2px dashed #E8E5E5; */
+  border: 2px solid black;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.content-header {
+  margin: 5px;
+  padding: 5px;
 }
 
 .header {

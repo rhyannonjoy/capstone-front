@@ -2,11 +2,12 @@ import "./DashboardPage.css";
 import ContactButton from "../components/buttons/ContactButton";
 import HomeButton from "../components/buttons/HomeButton";
 import pencil from "../images/pencil.png";
+import Questions from "../components/forms/questions/Questions";
 import SearchByDate from "../components/forms/SearchByDate";
 import SearchByKeyword from "../components/forms/SearchByKeyword";
 import SearchByTopic from "../components/forms/SearchByTopic";
 import SignOutButton from "../components/buttons/SignOutButton";
-import SubmitQuestionForm from "../components/forms/SubmitQuestionForm";
+import SubmitQuestionForm from "../components/forms/questions/SubmitQuestionForm";
 import { useParams } from "react-router-dom";
 
 const DashboardPage = () => {
@@ -39,7 +40,10 @@ const DashboardPage = () => {
           <SubmitQuestionForm />
         </div>
         <div className="content">
-          {/* <img src={pencil} className="pencil-image" alt="pencil"></img> */}
+          <h1 className="content-header">this is just a test</h1>
+          <div>
+            <Questions />
+          </div>
         </div>
       </div>
     </div>
