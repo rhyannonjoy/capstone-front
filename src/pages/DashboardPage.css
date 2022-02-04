@@ -5,6 +5,12 @@
   padding: 10px;
 }
 
+.dashboard-body {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+
 .dashboard-header {
   align-items: center;
   background-color: #bbff99;
@@ -22,15 +28,11 @@
   text-align: center;
 }
 
-.pencil-image {
-  display: block;
-  height: 75px;
-  width: 100px;
-  margin-bottom: 15px;
-}
-
-.scribble-image {
-  display: block;
-  height: 75px;
-  width: 100px;
+.search-container {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 300px 300px 300px;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
 }

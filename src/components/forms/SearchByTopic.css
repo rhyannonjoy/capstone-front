@@ -1,0 +1,13 @@
+.topic-search-field {
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: small;
+  height: 40px;
+  margin-bottom: 5px;
+  padding: 12px 20px;
+  resize: none;
+  width: 300px;  
+}

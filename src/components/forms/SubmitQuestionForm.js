@@ -1,28 +1,44 @@
-import SubmitButton from "../buttons/SubmitButton";
 import "./SubmitQuestionForm.css";
+import HideQuestionFormButton from "../buttons/HideQuestionFormButton";
+import ResetButton from "../buttons/ResetButton";
+import SubmitButton from "../buttons/SubmitButton";
 
 const SubmitQuestionForm = () => {
   return (
-    <div>
+    <div className="form-container">
       <form className="submit-form">
         <label>New Question</label>
-        <textarea placeholder=" Your Question Here"></textarea>
-        <p></p>
+        <textarea
+          className="question-field"
+          placeholder="Your Question Here"
+        ></textarea>
         <label>Answer</label>
-        <textarea placeholder=" Your Answer Here"></textarea>
-        <p></p>
+        <textarea
+          className="answer-field"
+          placeholder="Your Answer Here"
+        ></textarea>
         <label>Date</label>
-        <textarea placeholder=" Day / Month / Year"></textarea>
-        <p></p>
+        <input className="date-field" placeholder=" Day / Month / Year"></input>
         <label>Keywords</label>
-        <textarea placeholder=" Your Keywords Here"></textarea>
-        <p></p>
+        <input
+          className="keywords-field"
+          placeholder="Your Keywords Here"
+        ></input>
         <label>Topic</label>
-        <textarea placeholder=" Question Topic Here"></textarea>
-        <p></p>
+        <input
+          className="topic-field"
+          placeholder="Question Topic Here"
+        ></input>
         <label>Research</label>
-        <textarea placeholder=" Sources Here"></textarea>
-        <SubmitButton />
+        <textarea
+          className="research-field"
+          placeholder="Sources Here"
+        ></textarea>
+        <nav className="buttons-container">
+          <HideQuestionFormButton />
+          <ResetButton />
+          <SubmitButton />
+        </nav>
       </form>
     </div>
   );
