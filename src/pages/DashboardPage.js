@@ -31,19 +31,18 @@ const DashboardPage = () => {
       <div className="dashboard-body">
         <div className="header">
           <div className="search-container">
+            <h5 className="search-container-header">Search Stored Questions</h5>
             <SearchByDate />
             <SearchByKeyword />
             <SearchByTopic />
           </div>
         </div>
         <div className="sidebar">
-          <SubmitQuestionForm />
+          <Questions />
         </div>
         <div className="content">
-          <h1 className="content-header">this is just a test</h1>
-          <div>
-            <Questions />
-          </div>
+          <h1 className="content-header">saved questions ouput goes *here*</h1>
+          <div></div>
         </div>
       </div>
     </div>

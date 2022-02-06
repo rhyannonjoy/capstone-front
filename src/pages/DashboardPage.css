@@ -7,16 +7,18 @@
 
 .sidebar {
   grid-area: sidebar;
+  margin: 10px;
 }
 
 .content {
   /* background-image: url("../images/pencil.png"); */
   background-color: greenyellow;
+  border-radius: 20px;
   grid-area: content;
   /* border: 2px dashed #E8E5E5; */
-  border: 2px solid black;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  border: 2px dashed black;
+  margin-top: 17px;
+  height: 600px;
 }
 
 .content-header {
@@ -34,7 +36,7 @@
   grid-gap: 10px;
   grid-template-columns: 220px 220px 840px;
   grid-template-areas:
-  "....... header header"
+  "header header header"
   "sidebar ....... content";
 } 
 
@@ -43,7 +45,7 @@
   align-items: center;
   background-color: #bbff99;
   background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
-  border-radius: 15px;
+  border-radius: 25px;
   display: flex;
   font-family: 'Poppins', sans-serif;
   font-size: xx-large;
@@ -59,15 +61,20 @@
 .search-container {
   display: grid;
   gap: 5px;
-  grid-template-columns: 300px 300px 300px;
-  margin-top: 5px;
-  margin-left: 20px;
-  margin-right: 20px;
+  grid-template-columns: 180px 250px 250px 250px;
+  margin-left: 100px;
+  margin-top: 20px;
+  padding-left: 75px;
 }
 
-/* .pencil-image {
-  background-color: rebeccapurple;
-  height: 520px;
-  margin-top: 10px;
-  width: 500px;
-} */
+.search-container-header {
+  background-color: #bbff99;
+  background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: small;
+  font-weight: 400;
+  margin-top: 5px;
+  padding: 5px;
+  text-align: center;
+}

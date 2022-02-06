@@ -1,0 +1,17 @@
+.edit-button {
+    background-color: #E8E5E5;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    margin-right: 4px;
+    padding: 10px;
+}
+
+.edit-button:hover {
+    background-color: #f7d5c2;
+    color: black;
+}
