@@ -1,5 +1,5 @@
 import "./ContactForm.css";
-import SubmitButton from "../buttons/SubmitButton";
+import SendButton from "../buttons/SendButton";
 
 const ContactForm = () => {
   return (
@@ -38,7 +38,7 @@ const ContactForm = () => {
           required
         ></input>
         <p></p>
-        <SubmitButton />
+        <SendButton />
       </form>
     </div>
   );
