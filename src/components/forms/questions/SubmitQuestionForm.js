@@ -1,89 +1,28 @@
 import React, { useState } from "react";
 import useCollapse from "react-collapsed";
+import { useForm } from "react-hook-form";
 
 import "./SubmitQuestionForm.css";
 import EditButton from "../../buttons/EditButton";
-import ResetButton from "../../buttons/ResetButton";
 import SubmitButton from "../../buttons/SaveButton";
 
 const SubmitQuestionForm = React.memo((props) => {
-  const [enteredQuestion, setEnteredQuestion] = useState("");
-  const [enteredAnswer, setEnteredAnswer] = useState("");
-
   const [isExpanded, setExpanded] = useState(true);
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
 
-  const [formFields, setFormFields] = useState({
-    unedited_question: "",
-    edited_question: "",
-    answer: "",
-    date: "",
-    keywords: "",
-    topic: "",
-    research: "",
-  });
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data, e) => {};
 
-  const onUneditedQuestionChange = (event) => {
-    setFormFields({
-      ...formFields,
-      unedited_question: event.target.value,
-    });
-  };
-
-  const onEditedQuestionChange = (event) => {
-    setFormFields({
-      ...formFields,
-      edited_question: event.target.value,
-    });
-  };
-
-  const onAnswerChange = (event) => {
-    setFormFields({
-      ...formFields,
-      answer: event.target.value,
-    });
-  };
-
-  const onDateChange = (event) => {
-    setFormFields({
-      ...formFields,
-      date: event.target.value,
-    });
-  };
-
-  const onKeywordsChange = (event) => {
-    setFormFields({
-      ...formFields,
-      keywords: event.target.value,
-    });
-  };
-
-  const onTopicChange = (event) => {
-    setFormFields({
-      ...formFields,
-      topic: event.target.value,
-    });
-  };
-
-  const onResearchChange = (event) => {
-    setFormFields({
-      ...formFields,
-      research: event.target.value,
-    });
-  };
-
-  const resetFormFields = () => {
-    setFormFields("");
-  };
-
-  const submitHandler = (event) => {
-    event.preventDefault();
-    props.onAddQuestion({ question: enteredQuestion, answer: enteredAnswer });
-  };
+  console.log(errors);
 
   return (
     <div className="form-container">
-      <form onSubmit={submitHandler} className="submit-form">
+      <form className="submit-form" onSubmit={handleSubmit(onSubmit)}>
         <nav className="buttons-container">
           <button
             className="hide-button"
@@ -93,63 +32,62 @@ const SubmitQuestionForm = React.memo((props) => {
           >
             {isExpanded ? "Hide" : "Show"}
           </button>
-          <ResetButton type="reset" onClick={resetFormFields} />
+          <button className="reset-button" type="reset" onClick={() => reset()}>
+            Reset
+          </button>
           <EditButton />
           <SubmitButton />
         </nav>
         <div {...getCollapseProps()}>
           <label>Unedited New Question</label>
           <textarea
-            className="question-field"
+            className="unedited-question-field"
             placeholder="Your Question Here"
             type="text"
-            id="new_question"
-            value={enteredQuestion}
-            onChange={(event) => {
-              setEnteredQuestion(event.target.value);
-            }}
-          ></textarea>
+            {...register("unedited_question", { required: true })}
+            required
+          >
+            {errors.unedited_question && <p>This is required</p>}
+          </textarea>
           <label>Edited New Question</label>
           <textarea
             className="edited-question-field"
             placeholder="Your Edited Question Here"
             type="text"
-            id="new_edited_question"
-            value={enteredQuestion}
-            onChange={(event) => {
-              setEnteredQuestion(event.target.value);
-            }}
+            {...register("edited_question", { required: true })}
           ></textarea>
           <label>Answer</label>
           <textarea
             className="answer-field"
             placeholder="Your Answer Here"
             type="text"
-            id="answer"
-            value={enteredAnswer}
-            onChange={(event) => {
-              setEnteredAnswer(event.target.value);
-            }}
+            {...register("answer", { required: true })}
           ></textarea>
           <label>Date</label>
           <input
             className="date-field"
-            placeholder=" Day / Month / Year"
+            placeholder="DD / MM / YYYY"
+            {...register("date", { required: true })}
+            required
           ></input>
           <label>Keywords</label>
           <input
             className="keywords-field"
             placeholder="Your Keywords Here"
+            {...register("keywords", { required: true })}
           ></input>
           <label>Topic</label>
           <input
             className="topic-field"
             placeholder="Question Topic Here"
+            {...register("topic", { required: true })}
+            required
           ></input>
           <label>Research</label>
           <textarea
             className="research-field"
             placeholder="Sources Here"
+            {...register("resources", { required: true })}
           ></textarea>
         </div>
       </form>
