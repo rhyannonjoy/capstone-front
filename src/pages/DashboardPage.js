@@ -1,13 +1,11 @@
 import "./DashboardPage.css";
 import ContactButton from "../components/buttons/ContactButton";
 import HomeButton from "../components/buttons/HomeButton";
-import pencil from "../images/pencil.png";
-import Questions from "../components/forms/questions/Questions";
 import SearchByDate from "../components/forms/SearchByDate";
 import SearchByKeyword from "../components/forms/SearchByKeyword";
 import SearchByTopic from "../components/forms/SearchByTopic";
 import SignOutButton from "../components/buttons/SignOutButton";
-import SubmitQuestionForm from "../components/forms/questions/SubmitQuestionForm";
+import SubmitQuestionForm from "../components/forms/SubmitQuestionForm";
 import { useParams } from "react-router-dom";
 
 const DashboardPage = () => {
@@ -38,11 +36,10 @@ const DashboardPage = () => {
           </div>
         </div>
         <div className="sidebar">
-          <Questions />
+          <SubmitQuestionForm />
         </div>
         <div className="content">
-          <h1 className="content-header">saved questions ouput goes *here*</h1>
-          <div></div>
+          <h1>saved questions should display here</h1>
         </div>
       </div>
     </div>
