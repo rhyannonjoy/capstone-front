@@ -1,9 +1,7 @@
 import useCollapse from "react-collapsed";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-
 import "./SubmitQuestionForm.css";
-import EditButton from "../buttons/EditButton";
 
 const SubmitQuestionForm = () => {
   const [isExpanded, setExpanded] = useState(true);
@@ -23,7 +21,9 @@ const SubmitQuestionForm = () => {
     <div className="form-container">
       <form
         className="submit-form"
-        onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}
+        onSubmit={handleSubmit((data) =>
+          setData(JSON.stringify(data, null, 2))
+        )}
       >
         <nav className="buttons-container">
           <button
@@ -37,8 +37,8 @@ const SubmitQuestionForm = () => {
           <button className="reset-button" type="reset" onClick={() => reset()}>
             Reset
           </button>
-          <EditButton />
-          <button className="save-button" type="submit">
+          <button className="edit-button">Edit</button>
+          <button className="save-button" type="submit" onClick={handleSubmit}>
             Save
           </button>
         </nav>

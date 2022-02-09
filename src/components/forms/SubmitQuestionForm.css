@@ -44,6 +44,24 @@
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
+.edit-button {
+    background-color: #E8E5E5;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    margin-right: 4px;
+    padding: 10px;
+}
+
+.edit-button:hover {
+    background-color: #f7d5c2;
+    color: black;
+}
+
 .edited-question-field {
     background-color: #f8f8f8;
     box-sizing: border-box;
@@ -78,7 +96,7 @@
 }
 
 .hide-button:hover {
-    background-color: #f9a9dd;
+    background-color: #fbc3e7;
     color: black;
 }
 

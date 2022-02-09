@@ -39,7 +39,7 @@ const DashboardPage = () => {
           <SubmitQuestionForm />
         </div>
         <div className="content">
-          <h1>saved questions should display here</h1>
+          <h1>data goes here.</h1>
         </div>
       </div>
     </div>
