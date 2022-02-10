@@ -1,3 +1,4 @@
+import axios from "axios";
 import useCollapse from "react-collapsed";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
@@ -19,11 +20,24 @@ const SubmitQuestionForm = () => {
   console.log(errors);
 
   useEffect(() => {
-    console.log("I'm in useEffect!");
-    console.log(
-      "This will be called whenever an instance of this component mounts"
-    );
-    console.log("or whenever pieceOfState is updated");
+    axios
+      .get("some great url to make an API call to")
+      .then((response) => {
+        console.log(
+          "The data we get back from the HTTP response:",
+          response.data
+        );
+      })
+      .catch((error) => {
+        console.log(
+          "Anything that isn't status code 2XX is an error:",
+          error.response.status
+        );
+        console.log(
+          "The data from response with an error:",
+          error.response.data
+        );
+      });
   }, []);
 
   return (
