@@ -12,11 +12,10 @@
 
 .content {
   /* background-image: url("../images/pencil.png"); */
-  background-color: greenyellow;
+  background-color: #bef9a0;
   border-radius: 20px;
   grid-area: content;
-  /* border: 2px dashed #E8E5E5; */
-  border: 2px dashed black;
+  border: 4px dotted rgb(172, 168, 168);
   margin-top: 17px;
   height: 600px;
 }
@@ -29,7 +28,6 @@
 .header {
   grid-area: header;
 }
-
 
 .dashboard-body {
   display: grid;
