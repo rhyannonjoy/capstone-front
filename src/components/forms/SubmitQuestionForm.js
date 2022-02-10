@@ -7,7 +7,6 @@ import "./SubmitQuestionForm.css";
 const SubmitQuestionForm = () => {
   const [isExpanded, setExpanded] = useState(true);
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
-  const [pieceOfState, setPieceOfState] = useState(0);
 
   const {
     register,
@@ -20,24 +19,26 @@ const SubmitQuestionForm = () => {
   console.log(errors);
 
   useEffect(() => {
-    axios
-      .get("some great url to make an API call to")
-      .then((response) => {
-        console.log(
-          "The data we get back from the HTTP response:",
-          response.data
-        );
-      })
-      .catch((error) => {
-        console.log(
-          "Anything that isn't status code 2XX is an error:",
-          error.response.status
-        );
-        console.log(
-          "The data from response with an error:",
-          error.response.data
-        );
-      });
+    const editQuestion = () => {
+      const question = {
+        text: "i always forget how to go to their",
+        language: "en-US",
+      };
+      const headers = {
+        "content-type": "application/x-www-form-urlencoded",
+        "x-rapidapi-host": "grammarbot.p.rapidapi.com",
+        "x-rapidapi-key": "175a483918msh397279a1b38760ap129facjsn59b6486ef38c",
+      };
+      const config = { headers };
+      axios
+        .post("https://jsonplaceholder.typicode.com/posts", question, config)
+        .then((response) => {
+          console.log(response.status);
+          console.log(response.data);
+        })
+        .catch((e) => console.log("something went wrong :(", e));
+    };
+    editQuestion();
   }, []);
 
   return (
@@ -60,12 +61,7 @@ const SubmitQuestionForm = () => {
           <button className="reset-button" type="reset" onClick={() => reset()}>
             Reset
           </button>
-          <button
-            className="edit-button"
-            onClick={() => setPieceOfState(pieceOfState + 1)}
-          >
-            Edit
-          </button>
+          <button className="edit-button">Edit</button>
           <button className="save-button" type="submit" onClick={handleSubmit}>
             Save
           </button>
