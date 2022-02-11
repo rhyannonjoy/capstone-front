@@ -6,8 +6,10 @@ import { useEffect, useState } from "react";
 import "./SubmitQuestionForm.css";
 
 const SubmitQuestionForm = (props) => {
+  const [data, setData] = useState("");
   const [isExpanded, setExpanded] = useState(true);
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
+  const [isNewQuestion, setNewQuestion] = useState("");
 
   const {
     register,
@@ -16,30 +18,42 @@ const SubmitQuestionForm = (props) => {
     formState: { errors },
   } = useForm();
 
-  const [data, setData] = useState("");
-  console.log(errors);
-  useEffect(() => {
-    const editQuestion = () => {
-      const question = {
-        text: "i always forget how to go to their",
-        language: "en-US",
-      };
-      const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-        "x-rapidapi-host": "grammarbot.p.rapidapi.com",
-        "x-rapidapi-key": process.env.REACT_APP_API_KEY,
-      };
-      const config = { headers };
-      axios
-        .post("https://grammarbot.p.rapidapi.com/check", question, config)
-        .then((response) => {
-          console.log(response.status);
-          console.log(response.data);
-        })
-        .catch((e) => console.log("something went wrong :(", e));
+  const getQuestion = (e) => {
+    setNewQuestion(e.target.value);
+  };
+
+  const editQuestion = (question) => {
+    const headers = {
+      "content-type": process.env.REACT_APP_API_CONTENT_TYPE,
+      "x-rapidapi-host": process.env.REACT_APP_API_HOST,
+      "x-rapidapi-key": process.env.REACT_APP_API_KEY,
     };
-    editQuestion();
-  }, []);
+    console.log(process.env.REACT_APP_API_KEY);
+
+    const config = { headers };
+    axios
+      .post(
+        `https://grammarbot.p.rapidapi.com/check?text=${question}`,
+        { text: `${question}` },
+        config
+      )
+      .then((response) => {
+        console.log(response.status);
+        console.log(response.data);
+      })
+      .catch((e) => console.log("something went wrong :(", e));
+
+    // From your response in the API call, assign a variable to the exact data you need aka the edite
+    // text from GrammarBot
+    // return that value
+  };
+
+  console.log(errors);
+  // useEffect was just for testing
+  // useEffect(() => {
+  //   console.log("in useEffect SQF");
+  //   editQuestion();
+  // }, []);
 
   return (
     <div className="form-container">
@@ -61,7 +75,12 @@ const SubmitQuestionForm = (props) => {
           <button className="reset-button" type="reset" onClick={() => reset()}>
             Reset
           </button>
-          <button className="edit-button">Edit</button>
+          <button
+            className="edit-button"
+            onClick={() => editQuestion(isNewQuestion)}
+          >
+            Edit
+          </button>
           <button className="save-button" type="submit" onClick={handleSubmit}>
             Save
           </button>
@@ -71,9 +90,11 @@ const SubmitQuestionForm = (props) => {
           <label>Unedited New Question</label>
           <textarea
             className="unedited-question-field"
+            onChange={getQuestion}
             placeholder="Your Question Here"
             type="text"
-            {...register("unedited_question", { required: true })}
+            // {...register("unedited_question", { required: true })}
+            value={isNewQuestion}
             required
           >
             {errors.unedited_question && (
