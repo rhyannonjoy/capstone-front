@@ -27,7 +27,7 @@ const SubmitQuestionForm = () => {
       const headers = {
         "content-type": "application/x-www-form-urlencoded",
         "x-rapidapi-host": "grammarbot.p.rapidapi.com",
-        "x-rapidapi-key": "175a483918msh397279a1b38760ap129facjsn59b6486ef38c",
+        "x-rapidapi-key": process.env.REACT_APP_API_KEY,
       };
       const config = { headers };
       axios
