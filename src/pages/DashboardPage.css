@@ -5,39 +5,19 @@
   padding: 10px;
 }
 
-.sidebar {
-  grid-area: sidebar;
-  margin: 10px;
-}
-
-.content {
-  /* background-image: url("../images/pencil.png"); */
-  background-color: #bef9a0;
-  border-radius: 20px;
-  grid-area: content;
-  border: 4px dotted rgb(172, 168, 168);
-  margin-top: 17px;
-  height: 600px;
-}
-
 .content-header {
+  font-family: 'Poppins', sans-serif;
+  font-size: xx-large;
+  font-weight: 500;
   margin: 5px;
   padding: 5px;
 }
 
-.header {
-  grid-area: header;
-}
-
 .dashboard-body {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 220px 220px 840px;
-  grid-template-areas:
-  "header header header"
-  "sidebar ....... content";
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 } 
-
 
 .dashboard-header {
   align-items: center;
@@ -57,12 +37,8 @@
 }
 
 .search-container {
-  display: grid;
-  gap: 5px;
-  grid-template-columns: 180px 250px 250px 250px;
-  margin-left: 100px;
-  margin-top: 20px;
-  padding-left: 75px;
+  display: flex;
+  flex-direction: row;
 }
 
 .search-container-header {
@@ -75,4 +51,5 @@
   margin-top: 5px;
   padding: 5px;
   text-align: center;
+  width: 250px;
 }

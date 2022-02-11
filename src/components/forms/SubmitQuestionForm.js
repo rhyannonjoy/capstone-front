@@ -1,17 +1,21 @@
 import axios from "axios";
+import SearchByDate from "../forms/SearchByDate";
 import useCollapse from "react-collapsed";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import "./SubmitQuestionForm.css";
-const SubmitQuestionForm = () => {
+
+const SubmitQuestionForm = (props) => {
   const [isExpanded, setExpanded] = useState(true);
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
+
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm();
+
   const [data, setData] = useState("");
   console.log(errors);
   useEffect(() => {
@@ -27,7 +31,7 @@ const SubmitQuestionForm = () => {
       };
       const config = { headers };
       axios
-        .post("https://jsonplaceholder.typicode.com/posts", question, config)
+        .post("https://grammarbot.p.rapidapi.com/check", question, config)
         .then((response) => {
           console.log(response.status);
           console.log(response.data);
@@ -36,6 +40,7 @@ const SubmitQuestionForm = () => {
     };
     editQuestion();
   }, []);
+
   return (
     <div className="form-container">
       <form
@@ -60,6 +65,7 @@ const SubmitQuestionForm = () => {
           <button className="save-button" type="submit" onClick={handleSubmit}>
             Save
           </button>
+          <SearchByDate />
         </nav>
         <div {...getCollapseProps()}>
           <label>Unedited New Question</label>
@@ -120,9 +126,17 @@ const SubmitQuestionForm = () => {
             placeholder="Sources Here"
             {...register("resources", { required: false })}
           ></textarea>
-          <p>{data}</p>
+          <nav className="social-buttons-container">
+            <button className="slack-button">Slack</button>
+            <button className="stack-overflow-button">Stack Overflow</button>
+            <button className="twitter-button">Twitter</button>
+          </nav>
         </div>
       </form>
+      <div className="saved-questions-container">
+        <h3 className="saved-questions-header">Saved Questions</h3>
+        <p className="saved-questions-data">{data}</p>
+      </div>
     </div>
   );
 };
