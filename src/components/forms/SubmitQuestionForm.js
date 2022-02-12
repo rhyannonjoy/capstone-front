@@ -9,6 +9,7 @@ const SubmitQuestionForm = (props) => {
   const [data, setData] = useState("");
   const [isExpanded, setExpanded] = useState(true);
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
+  const [isQuestions, setQuestions] = useState("");
   const [isNewQuestion, setNewQuestion] = useState("");
 
   const {
@@ -17,6 +18,20 @@ const SubmitQuestionForm = (props) => {
     reset,
     formState: { errors },
   } = useForm();
+
+  const getQuestions = () => {
+    axios
+      .get("https://techqa-back.herokuapp.com/questions")
+      .then((response) => {
+        setQuestions(response.data);
+        console.log(response.data);
+      })
+      .catch((e) => console.log("something went wrong :(", e));
+  };
+
+  useEffect(() => {
+    getQuestions();
+  }, []);
 
   const getQuestion = (e) => {
     setNewQuestion(e.target.value);
