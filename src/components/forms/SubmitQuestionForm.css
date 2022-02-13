@@ -125,6 +125,17 @@
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
+.questions-container {
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    font-weight: 300;
+    width: 500px;
+    height: 300px;
+    overflow-x: auto;
+    overflow-y: auto;
+    text-align:justify;
+}
+
 .research-field {
     background-color: #f8f8f8;
     box-sizing: border-box;
@@ -184,11 +195,11 @@
     align-items: center;
     border: 4px dotted #E8E5E5;
     border-radius: 20px;
-    margin: 10px;
+    margin: 5px;
     padding: 5px;
     text-align: left;
-    height: 650px;
-    width: 500px;
+    height: 665px;
+    width: 530px;
     margin-top: 5px;
 } 
 
@@ -252,8 +263,8 @@
     font-family: 'Poppins', sans-serif;
     font-size: medium;
     font-weight: 400;
-    height: 640px;
-    width: 500px;
+    height: 655px;
+    width: 530px;
     margin: 5px;
     margin-left: 10px;
     padding: 15px;

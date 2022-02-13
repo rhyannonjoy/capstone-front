@@ -16,24 +16,91 @@ const SubmitQuestionForm = (props) => {
     formState: { errors },
   } = useForm();
 
+  // display stored questions, remains in 'Saved Questions' display
   const getQuestions = () => {
     axios
       .get("https://techqa-back.herokuapp.com/questions")
       .then((response) => {
         setQuestions(response.data);
+        console.log("Successful API request!");
         console.log(response.data);
       })
-      .catch((e) => console.log("something went wrong :(", e));
+      .catch((e) => console.log("Something went wrong :(", e));
   };
 
   useEffect(() => {
     getQuestions();
   }, []);
 
+  const displayQuestions = () => {
+    return isQuestions ? (
+      isQuestions.map((question) => {
+        return (
+          <div key={question.id}>
+            <ul>
+              <li>
+                <b>Unedited Question:</b> {question.unedited_question}
+              </li>
+              <li>
+                <b>Edited Question:</b> {question.edited_question}
+              </li>
+              <li>
+                <b>Answer:</b> {question.answer}
+              </li>
+              <li>
+                <b>Date:</b> {question.date}
+              </li>
+              <li>
+                <b>Keywords:</b> {question.keywords}
+              </li>
+              <li>
+                <b>Topic:</b> {question.topic}
+              </li>
+              <li>
+                <b>Research:</b> {question.research}
+              </li>
+            </ul>
+          </div>
+        );
+      })
+    ) : (
+      <h3>No questions yet.</h3>
+    );
+  };
+
+  // post a new question to saved questions, call with 'Save' button
+  // const postQuestion = () => {
+  //   axios
+  //     .post("https://techqa-back.herokuapp.com/questions", {
+  //       unedited_question: "unedited",
+  //       edited_question: "edited",
+  //       answer: "answer",
+  //       date: "02/13/2022",
+  //       topic: "topic",
+  //       keywords: "keyword, keyword",
+  //       research: "react-docs.com",
+  //     })
+  //     .then((response) => {
+  //       console.log("response", response);
+  //       console.log("response data:", response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log("Error:", error);
+  //       console.log("Error Response:", error.response);
+  //     });
+  // };
+
+  // useEffect(() => {
+  //   postQuestion();
+  // }, []);
+
+  // delete a question, call with 'Delete' button
+
   const getQuestion = (e) => {
     setNewQuestion(e.target.value);
   };
 
+  // get editing help from Grammar Bot API, called with 'Edit' button
   const editQuestion = (question) => {
     const headers = {
       "content-type": process.env.REACT_APP_API_CONTENT_TYPE,
@@ -51,9 +118,10 @@ const SubmitQuestionForm = (props) => {
       )
       .then((response) => {
         console.log(response.status);
+        console.log("Successful API request!");
         console.log(response.data);
       })
-      .catch((e) => console.log("something went wrong :(", e));
+      .catch((e) => console.log("Something went wrong :(", e));
 
     // From your response in the API call, assign a variable to the exact data you need aka the edite
     // text from GrammarBot
@@ -163,8 +231,8 @@ const SubmitQuestionForm = (props) => {
       </form>
       <div className="saved-questions-container">
         <h3 className="saved-questions-header">Saved Questions</h3>
+        <div className="questions-container">{displayQuestions()}</div>
         <p className="saved-questions-data">{data}</p>
-        {/* {isQuestions[0].unedited_question} */}
       </div>
     </div>
   );
