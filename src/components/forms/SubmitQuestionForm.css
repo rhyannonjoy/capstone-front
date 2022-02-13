@@ -44,6 +44,25 @@
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
+.delete-button {
+    background-color: #E8E5E5;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    margin-right: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.delete-button:hover {
+    background-color: #fbc3e7;
+    color: black;
+}
+
 .edit-button {
     background-color: #E8E5E5;
     border: 2px solid white;
@@ -84,25 +103,6 @@
 .form-container {
     display: flex;
     flex-direction: row;
-}
-
-.hide-button {
-    background-color: #E8E5E5;
-    border: 2px solid white;
-    border-radius: 8px;
-    color: black;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-size: medium;
-    font-weight: 500;
-    margin-right: 4px;
-    padding: 10px;
-    text-align: center;
-}
-
-.hide-button:hover {
-    background-color: #fbc3e7;
-    color: black;
 }
 
 .keywords-field {

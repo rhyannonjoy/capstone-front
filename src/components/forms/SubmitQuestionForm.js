@@ -1,14 +1,11 @@
 import axios from "axios";
 import SearchByDate from "../forms/SearchByDate";
-import useCollapse from "react-collapsed";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import "./SubmitQuestionForm.css";
 
 const SubmitQuestionForm = (props) => {
   const [data, setData] = useState("");
-  const [isExpanded, setExpanded] = useState(true);
-  const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
   const [isQuestions, setQuestions] = useState("");
   const [isNewQuestion, setNewQuestion] = useState("");
 
@@ -79,16 +76,8 @@ const SubmitQuestionForm = (props) => {
         )}
       >
         <nav className="buttons-container">
-          <button
-            className="hide-button"
-            {...getToggleProps({
-              onClick: () => setExpanded((prevExpanded) => !prevExpanded),
-            })}
-          >
-            {isExpanded ? "Hide" : "Show"}
-          </button>
-          <button className="reset-button" type="reset" onClick={() => reset()}>
-            Reset
+          <button className="delete-button" type="submit">
+            Delete
           </button>
           <button
             className="edit-button"
@@ -96,12 +85,15 @@ const SubmitQuestionForm = (props) => {
           >
             Edit
           </button>
+          <button className="reset-button" type="reset" onClick={() => reset()}>
+            Reset
+          </button>
           <button className="save-button" type="submit" onClick={handleSubmit}>
             Save
           </button>
           <SearchByDate />
         </nav>
-        <div {...getCollapseProps()}>
+        <div>
           <label>Unedited New Question</label>
           <textarea
             className="unedited-question-field"
@@ -172,6 +164,7 @@ const SubmitQuestionForm = (props) => {
       <div className="saved-questions-container">
         <h3 className="saved-questions-header">Saved Questions</h3>
         <p className="saved-questions-data">{data}</p>
+        {/* {isQuestions[0].unedited_question} */}
       </div>
     </div>
   );
