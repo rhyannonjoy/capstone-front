@@ -1,20 +1,94 @@
 import axios from "axios";
 import SearchByDate from "../forms/SearchByDate";
-import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import "./SubmitQuestionForm.css";
 
 const SubmitQuestionForm = (props) => {
-  const [data, setData] = useState("");
+  const [formFields, setFormFields] = useState({
+    unedited_question: "",
+    edited_question: "",
+    answer: "",
+    date: "",
+    keywords: "",
+    topic: "",
+    research: "",
+  });
+
   const [isQuestions, setQuestions] = useState("");
   const [isNewQuestion, setNewQuestion] = useState("");
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
+  const onUneditedQuestionChange = (event) => {
+    setFormFields({
+      ...formFields,
+      unedited_question: event.target.value,
+    });
+  };
+
+  const onEditedQuestionChange = (event) => {
+    setFormFields({
+      ...formFields,
+      edited_question: event.target.value,
+    });
+  };
+
+  const onAnswerChange = (event) => {
+    setFormFields({
+      ...formFields,
+      answer: event.target.value,
+    });
+  };
+
+  const onDateChange = (event) => {
+    setFormFields({
+      ...formFields,
+      date: event.target.value,
+    });
+  };
+
+  const onKeywordsChange = (event) => {
+    setFormFields({
+      ...formFields,
+      keywords: event.target.value,
+    });
+  };
+
+  const onResearchChange = (event) => {
+    setFormFields({
+      ...formFields,
+      research: event.target.value,
+    });
+  };
+
+  const onTopicChange = (event) => {
+    setFormFields({
+      ...formFields,
+      topic: event.target.value,
+    });
+  };
+
+  const resetFormFields = () => {
+    setFormFields("");
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formFields);
+  };
+
+  // const addNewQuestion = (newQuestion) => {
+  //   const newQuestionList = [...isQuestions];
+
+  //   newQuestionList.push({
+  //     unedited_question: newQuestion.unedited_question,
+  //     edited_question: newQuestion.edited_question,
+  //     answer: newQuestion.answer,
+  //     date: newQuestion.date,
+  //     keywords: newQuestion.keywords,
+  //     topic: newQuestion.topic,
+  //     research: newQuestion.research,
+  //   });
+  //   setQuestions(newQuestionList);
+  // };
 
   // display stored questions, remains in 'Saved Questions' display
   const getQuestions = () => {
@@ -38,6 +112,9 @@ const SubmitQuestionForm = (props) => {
         return (
           <div key={question.id}>
             <ul>
+              <li>
+                <b>ID:</b> {question.id}
+              </li>
               <li>
                 <b>Unedited Question:</b> {question.unedited_question}
               </li>
@@ -96,9 +173,9 @@ const SubmitQuestionForm = (props) => {
 
   // delete a question, call with 'Delete' button
 
-  const getQuestion = (e) => {
-    setNewQuestion(e.target.value);
-  };
+  // const getQuestion = (e) => {
+  //   setNewQuestion(e.target.value);
+  // };
 
   // get editing help from Grammar Bot API, called with 'Edit' button
   const editQuestion = (question) => {
@@ -128,7 +205,6 @@ const SubmitQuestionForm = (props) => {
     // return that value
   };
 
-  console.log(errors);
   // useEffect was just for testing
   // useEffect(() => {
   //   console.log("in useEffect SQF");
@@ -137,12 +213,7 @@ const SubmitQuestionForm = (props) => {
 
   return (
     <div className="form-container">
-      <form
-        className="submit-form"
-        onSubmit={handleSubmit((data) =>
-          setData(JSON.stringify(data, null, 2))
-        )}
-      >
+      <form className="submit-form" onSubmit={handleSubmit}>
         <nav className="buttons-container">
           <button className="delete-button" type="submit">
             Delete
@@ -153,10 +224,14 @@ const SubmitQuestionForm = (props) => {
           >
             Edit
           </button>
-          <button className="reset-button" type="reset" onClick={() => reset()}>
+          <button
+            className="reset-button"
+            onClick={resetFormFields}
+            type="reset"
+          >
             Reset
           </button>
-          <button className="save-button" type="submit" onClick={handleSubmit}>
+          <button className="save-button" type="submit" value="submit">
             Save
           </button>
           <SearchByDate />
@@ -165,62 +240,54 @@ const SubmitQuestionForm = (props) => {
           <label>Unedited New Question</label>
           <textarea
             className="unedited-question-field"
-            onChange={getQuestion}
+            onChange={onUneditedQuestionChange}
             placeholder="Your Question Here"
             type="text"
-            // {...register("unedited_question", { required: true })}
-            value={isNewQuestion}
-            required
-          >
-            {errors.unedited_question && (
-              <p className="error-message">A question is required.</p>
-            )}
-          </textarea>
+            value={formFields.unedited_question}
+          ></textarea>
           <label>Edited New Question</label>
           <textarea
             className="edited-question-field"
+            onChange={onEditedQuestionChange}
             placeholder="Your Edited Question Here"
             type="text"
-            {...register("edited_question", { required: false })}
-          >
-            {errors.unedited_question && (
-              <p className="error-message">
-                Your unedited question is required.
-              </p>
-            )}
-          </textarea>
+            value={formFields.edited_question}
+          ></textarea>
           <label>Answer</label>
           <textarea
             className="answer-field"
+            onChange={onAnswerChange}
             placeholder="Your Answer Here"
             type="text"
-            {...register("answer", { required: false })}
+            value={formFields.answer}
           ></textarea>
           <label>Date</label>
           <input
             className="date-field"
+            onChange={onDateChange}
             placeholder="DD / MM / YYYY"
-            {...register("date", { required: true })}
-            required
+            value={formFields.date}
           ></input>
           <label>Keywords</label>
           <input
             className="keywords-field"
+            onChange={onKeywordsChange}
             placeholder="Your Keywords Here"
-            {...register("keywords", { required: false })}
+            value={formFields.keywords}
           ></input>
           <label>Topic</label>
           <input
             className="topic-field"
+            onChange={onTopicChange}
             placeholder="Question Topic Here"
-            {...register("topic", { required: true })}
-            required
+            value={formFields.topic}
           ></input>
           <label>Research</label>
           <textarea
             className="research-field"
+            onChange={onResearchChange}
             placeholder="Sources Here"
-            {...register("resources", { required: false })}
+            value={formFields.research}
           ></textarea>
           <nav className="social-buttons-container">
             <button className="slack-button">Slack</button>
@@ -232,7 +299,6 @@ const SubmitQuestionForm = (props) => {
       <div className="saved-questions-container">
         <h3 className="saved-questions-header">Saved Questions</h3>
         <div className="questions-container">{displayQuestions()}</div>
-        <p className="saved-questions-data">{data}</p>
       </div>
     </div>
   );
