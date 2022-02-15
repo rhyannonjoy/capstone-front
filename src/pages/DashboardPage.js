@@ -1,5 +1,6 @@
 import "./DashboardPage.css";
 import ContactButton from "../components/buttons/ContactButton";
+import EditQuestionForm from "../components/forms/EditQuestionForm";
 import HomeButton from "../components/buttons/HomeButton";
 import SignOutButton from "../components/buttons/SignOutButton";
 import SubmitQuestionForm from "../components/forms/SubmitQuestionForm";
@@ -26,6 +27,9 @@ const DashboardPage = () => {
       <div className="dashboard-body">
         <div className="header">
           <SubmitQuestionForm />
+        </div>
+        <div>
+          <EditQuestionForm />
         </div>
       </div>
     </div>

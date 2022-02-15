@@ -1,4 +1,5 @@
 import "./SignUpForm.css";
+import CreateAccountButton from "../buttons/CreateAccountButton";
 
 const SignUpForm = () => {
   return (
@@ -21,7 +22,7 @@ const SignUpForm = () => {
             type="password"
           ></input>
           <p></p>
-          <button className="create-account-button">Create Account</button>
+          <CreateAccountButton />
         </form>
       </div>
     </div>

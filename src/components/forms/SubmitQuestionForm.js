@@ -238,8 +238,8 @@ const SubmitQuestionForm = () => {
           </button>
           <button
             className="reset-button"
-            onClick={resetFormFields}
             type="reset"
+            onClick={resetFormFields}
           >
             Reset
           </button>
