@@ -3,7 +3,7 @@ import SearchByDate from "../forms/SearchByDate";
 import { useEffect, useState } from "react";
 import "./SubmitQuestionForm.css";
 
-const SubmitQuestionForm = (props) => {
+const SubmitQuestionForm = () => {
   const [formFields, setFormFields] = useState({
     unedited_question: "",
     edited_question: "",
@@ -15,7 +15,7 @@ const SubmitQuestionForm = (props) => {
   });
 
   const [isQuestions, setQuestions] = useState("");
-  const [isNewQuestion, setNewQuestion] = useState("");
+  const [isEdits, setEdits] = useState("");
 
   const onUneditedQuestionChange = (event) => {
     setFormFields({
@@ -70,26 +70,6 @@ const SubmitQuestionForm = (props) => {
     setFormFields("");
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(formFields);
-  };
-
-  // const addNewQuestion = (newQuestion) => {
-  //   const newQuestionList = [...isQuestions];
-
-  //   newQuestionList.push({
-  //     unedited_question: newQuestion.unedited_question,
-  //     edited_question: newQuestion.edited_question,
-  //     answer: newQuestion.answer,
-  //     date: newQuestion.date,
-  //     keywords: newQuestion.keywords,
-  //     topic: newQuestion.topic,
-  //     research: newQuestion.research,
-  //   });
-  //   setQuestions(newQuestionList);
-  // };
-
   // display stored questions, remains in 'Saved Questions' display
   const getQuestions = () => {
     axios
@@ -112,6 +92,13 @@ const SubmitQuestionForm = (props) => {
         return (
           <div key={question.id}>
             <ul>
+              <button
+                className="delete-button"
+                onClick={(e) => deleteQuestion(e, question)}
+              >
+                Delete
+              </button>
+              <button className="edit-button">Edit</button>
               <li>
                 <b>ID:</b> {question.id}
               </li>
@@ -146,45 +133,50 @@ const SubmitQuestionForm = (props) => {
   };
 
   // post a new question to saved questions, call with 'Save' button
-  // const postQuestion = () => {
-  //   axios
-  //     .post("https://techqa-back.herokuapp.com/questions", {
-  //       unedited_question: "unedited",
-  //       edited_question: "edited",
-  //       answer: "answer",
-  //       date: "02/13/2022",
-  //       topic: "topic",
-  //       keywords: "keyword, keyword",
-  //       research: "react-docs.com",
-  //     })
-  //     .then((response) => {
-  //       console.log("response", response);
-  //       console.log("response data:", response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.log("Error:", error);
-  //       console.log("Error Response:", error.response);
-  //     });
-  // };
-
-  // useEffect(() => {
-  //   postQuestion();
-  // }, []);
+  const postQuestion = (e, formFields) => {
+    e.preventDefault();
+    axios
+      .post("https://techqa-back.herokuapp.com/questions", {
+        unedited_question: formFields.unedited_question,
+        edited_question: formFields.edited_question,
+        answer: formFields.answer,
+        date: formFields.date,
+        topic: formFields.topic,
+        keywords: formFields.keywords,
+        research: formFields.research,
+      })
+      .then((response) => {
+        console.log("response", response);
+        console.log("response data:", response.data);
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+        console.log("Error Response:", error.response);
+      });
+  };
 
   // delete a question, call with 'Delete' button
+  const deleteQuestion = (e, question_id) => {
+    e.preventDefault();
+    axios
+      .delete("https://techqa-back.herokuapp.com/questions/160")
+      .then((response) => {
+        console.log(response.status);
+        console.log("Successful API request!");
+      })
+      .catch((e) => console.log("Something went wrong :(", e));
+  };
 
-  // const getQuestion = (e) => {
-  //   setNewQuestion(e.target.value);
-  // };
+  // edit a question form, call with 'Edit' button -> new form?
 
-  // get editing help from Grammar Bot API, called with 'Edit' button
-  const editQuestion = (question) => {
+  // get editing help from Grammar Bot API, called with 'Grammar Bot' button
+  const editQuestion = (e, question) => {
+    e.preventDefault();
     const headers = {
       "content-type": process.env.REACT_APP_API_CONTENT_TYPE,
       "x-rapidapi-host": process.env.REACT_APP_API_HOST,
       "x-rapidapi-key": process.env.REACT_APP_API_KEY,
     };
-    console.log(process.env.REACT_APP_API_KEY);
 
     const config = { headers };
     axios
@@ -197,32 +189,52 @@ const SubmitQuestionForm = (props) => {
         console.log(response.status);
         console.log("Successful API request!");
         console.log(response.data);
+        const grammarEdits = response.data.matches;
+        setEdits(grammarEdits);
       })
       .catch((e) => console.log("Something went wrong :(", e));
-
-    // From your response in the API call, assign a variable to the exact data you need aka the edite
-    // text from GrammarBot
-    // return that value
   };
 
-  // useEffect was just for testing
-  // useEffect(() => {
-  //   console.log("in useEffect SQF");
-  //   editQuestion();
-  // }, []);
+  const displayEdits = () => {
+    return isEdits ? (
+      isEdits.map((edit) => {
+        return (
+          <div key={edit.id}>
+            <ul>
+              <li>
+                <b>Message: </b>
+                {edit.message}
+              </li>
+              <li>
+                <b>Replacements: </b>
+                {edit.replacements.map((d) => (
+                  <>
+                    {/* key={d.id} */}
+                    {d.value}{" "}
+                  </>
+                ))}
+              </li>
+              <li>
+                <b>Gramatical Rule: </b> <>{edit.rule.description}</>
+              </li>
+            </ul>
+          </div>
+        );
+      })
+    ) : (
+      <h3>No Grammar Bot edits available.</h3>
+    );
+  };
 
   return (
     <div className="form-container">
-      <form className="submit-form" onSubmit={handleSubmit}>
+      <form className="submit-form">
         <nav className="buttons-container">
-          <button className="delete-button" type="submit">
-            Delete
-          </button>
           <button
-            className="edit-button"
-            onClick={() => editQuestion(isNewQuestion)}
+            className="grammar-bot-button"
+            onClick={(e) => editQuestion(e, formFields.unedited_question)}
           >
-            Edit
+            Grammar Bot
           </button>
           <button
             className="reset-button"
@@ -231,7 +243,12 @@ const SubmitQuestionForm = (props) => {
           >
             Reset
           </button>
-          <button className="save-button" type="submit" value="submit">
+          <button
+            className="save-button"
+            onClick={(e) => {
+              postQuestion(e, formFields);
+            }}
+          >
             Save
           </button>
           <SearchByDate />
@@ -297,6 +314,8 @@ const SubmitQuestionForm = (props) => {
         </div>
       </form>
       <div className="saved-questions-container">
+        <h3 className="grammar-suggestions-header">Grammatical Suggestions</h3>
+        <div className="grammar-suggestions-container">{displayEdits()}</div>
         <h3 className="saved-questions-header">Saved Questions</h3>
         <div className="questions-container">{displayQuestions()}</div>
       </div>
