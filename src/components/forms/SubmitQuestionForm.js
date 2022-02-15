@@ -4,7 +4,7 @@ import SearchByDate from "../forms/SearchByDate";
 import { useEffect, useState } from "react";
 import "./SubmitQuestionForm.css";
 
-const SubmitQuestionForm = () => {
+const SubmitQuestionForm = (props) => {
   const [formFields, setFormFields] = useState({
     unedited_question: "",
     edited_question: "",

@@ -153,7 +153,6 @@
     font-size: medium;
 }
 
-
 .edit-form {
     background-color: #bbff99;
     background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
@@ -179,7 +178,25 @@
     padding: 1px;
     text-align: center;
 }
- 
+
+.reset-edits-button {
+    background-color: #E8E5E5;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    margin: 5px;
+    padding: 10px;
+}
+
+.reset-edits-button:hover {
+    background-color: #edf6d3;
+    color: black;
+}
+
 .topic-field {
     background-color: #f8f8f8;
     box-sizing: border-box;
