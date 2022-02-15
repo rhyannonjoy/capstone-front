@@ -1,0 +1,16 @@
+.create-account-button {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    font-weight: medium;
+    padding: 10px;
+}
+
+.create-account-button:hover {
+    background-color: #ffff8a;
+    color: black;
+}
