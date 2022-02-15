@@ -1,4 +1,5 @@
 import axios from "axios";
+import EditQuestionForm from "./EditQuestionForm";
 import SearchByDate from "../forms/SearchByDate";
 import { useEffect, useState } from "react";
 import "./SubmitQuestionForm.css";
@@ -16,6 +17,7 @@ const SubmitQuestionForm = () => {
 
   const [isQuestions, setQuestions] = useState("");
   const [isEdits, setEdits] = useState("");
+  const [show, setShow] = useState(false);
 
   const onUneditedQuestionChange = (event) => {
     setFormFields({
@@ -98,7 +100,9 @@ const SubmitQuestionForm = () => {
               >
                 Delete
               </button>
-              <button className="edit-button">Edit</button>
+              <button className="edit-button" onClick={() => setShow(!show)}>
+                {show ? "Hide Edit Form" : "Edit"}
+              </button>
               <li>
                 <b>ID:</b> {question.id}
               </li>
@@ -318,6 +322,9 @@ const SubmitQuestionForm = () => {
         <div className="grammar-suggestions-container">{displayEdits()}</div>
         <h3 className="saved-questions-header">Saved Questions</h3>
         <div className="questions-container">{displayQuestions()}</div>
+      </div>
+      <div>
+        <div>{show ? <EditQuestionForm /> : null}</div>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ const EditQuestionForm = () => {
   return (
     <div className="form-container">
       <form className="edit-form">
+        <header className="edit-form-header">Edit Your Question</header>
         <div>
           <label>Unedited New Question</label>
           <textarea

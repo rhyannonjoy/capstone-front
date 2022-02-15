@@ -161,11 +161,23 @@
     font-family: 'Poppins', sans-serif;
     font-size: medium;
     font-weight: 400;
-    height: 590px;
+    height: 654px;
     width: 530px;
     margin: 5px;
     margin-left: 10px;
     padding: 15px;
+}
+
+.edit-form-header {
+    background-color: #E8E5E5;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    font-weight: 300;
+    margin-bottom: 35px;
+    padding: 1px;
+    text-align: center;
 }
  
 .topic-field {
