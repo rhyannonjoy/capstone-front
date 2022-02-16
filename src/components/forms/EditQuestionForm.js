@@ -93,7 +93,7 @@ const EditQuestionForm = () => {
     <div className="edit-form-container">
       <form className="edit-form">
         <header className="edit-form-header">Edit Your Question</header>
-        <div>
+        <div className="edit-form-content">
           <label>Unedited New Question</label>
           <textarea
             className="unedited-question-field"
@@ -146,21 +146,23 @@ const EditQuestionForm = () => {
             placeholder="Sources Here"
             value={formFields.research}
           ></textarea>
-          <button
-            className="reset-edits-button"
-            type="reset"
-            onClick={resetFormFields}
-          >
-            Reset
-          </button>
-          <button
-            className="save-edits-button"
-            onClick={(e) => {
-              editSavedQuestion(e, formFields);
-            }}
-          >
-            Save Edits
-          </button>
+          <div className="edit-buttons-container">
+            <button
+              className="reset-edits-button"
+              type="reset"
+              onClick={resetFormFields}
+            >
+              Reset
+            </button>
+            <button
+              className="save-edits-button"
+              onClick={(e) => {
+                editSavedQuestion(e, formFields);
+              }}
+            >
+              Save Edits
+            </button>
+          </div>
         </div>
       </form>
     </div>

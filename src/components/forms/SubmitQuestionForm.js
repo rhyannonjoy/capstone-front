@@ -1,6 +1,7 @@
 import axios from "axios";
 import EditQuestionForm from "./EditQuestionForm";
 import SearchByDate from "../forms/SearchByDate";
+import SendIcon from "@material-ui/icons/Send";
 import { useEffect, useState } from "react";
 import "./SubmitQuestionForm.css";
 
@@ -311,6 +312,9 @@ const SubmitQuestionForm = (props) => {
             value={formFields.research}
           ></textarea>
           <nav className="social-buttons-container">
+            <div className="send-icon">
+              <SendIcon />
+            </div>
             <button className="slack-button">Slack</button>
             <button className="stack-overflow-button">Stack Overflow</button>
             <button className="twitter-button">Twitter</button>

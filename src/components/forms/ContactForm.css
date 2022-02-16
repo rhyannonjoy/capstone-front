@@ -9,9 +9,9 @@
     font-family: 'Poppins', sans-serif;
     font-size: medium;
     font-weight: 350;
-    margin-top: none;
+    margin-bottom: 20px;
     padding: 35px;
-    height: 305px;
+    height: 285px;
     width: 350px;
 }
 
@@ -47,5 +47,6 @@
 }
 
 .send-button-container {
+    margin-top: 20px;
     text-align: center;
 }

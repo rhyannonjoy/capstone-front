@@ -37,6 +37,36 @@
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
+.edit-buttons-container {
+    margin-top: 10px;
+}
+
+.edit-form {
+    background-color: #bbff99;
+    background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    font-weight: 400;
+    height: 654px;
+    width: 530px;
+    margin: 5px;
+    margin-left: 10px;
+    padding: 15px;
+}
+
+.edit-form-header {
+    background-color: #E8E5E5;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    font-weight: 300;
+    margin-bottom: 25px;
+    padding: 2px;
+    text-align: center;
+}
+
 .edited-question-field {
     background-color: #f8f8f8;
     box-sizing: border-box;
@@ -151,32 +181,6 @@
 .saved-questions-data{
     font-family: 'Poppins', sans-serif;
     font-size: medium;
-}
-
-.edit-form {
-    background-color: #bbff99;
-    background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
-    border-radius: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-size: medium;
-    font-weight: 400;
-    height: 654px;
-    width: 530px;
-    margin: 5px;
-    margin-left: 10px;
-    padding: 15px;
-}
-
-.edit-form-header {
-    background-color: #E8E5E5;
-    border: 2px solid white;
-    border-radius: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-size: large;
-    font-weight: 300;
-    margin-bottom: 35px;
-    padding: 1px;
-    text-align: center;
 }
 
 .reset-edits-button {

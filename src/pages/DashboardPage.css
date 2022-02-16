@@ -23,17 +23,33 @@
   align-items: center;
   background-color: #bbff99;
   background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
-  border-radius: 25px;
+  border-radius: 30px;
   display: flex;
   font-family: 'Poppins', sans-serif;
   font-size: xx-large;
-  font-weight: 300;
+  font-weight: 400;
   justify-content: center;
   height: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-right: 5px;
   margin-top: 1px;
   text-align: center;
+  width: 90%
+}
+
+.edit-icon {
+  background-color: #bbff99;
+  background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
+  border: 2px solid black;
+  border-radius: 20px;
+  color: black;
+  display: grid;
+  height: 50px;
+  width: 50px;
+  place-items: center;
+}
+
+.edit-icon svg {
+  font-size: 40px;
 }
 
 .search-container {

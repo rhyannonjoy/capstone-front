@@ -4,6 +4,7 @@ import HomeButton from "../components/buttons/HomeButton";
 import SignOutButton from "../components/buttons/SignOutButton";
 import SubmitQuestionForm from "../components/forms/SubmitQuestionForm";
 import { useParams } from "react-router-dom";
+import EditIcon from "@material-ui/icons/Edit";
 
 const DashboardPage = () => {
   let { username } = useParams();
@@ -12,11 +13,10 @@ const DashboardPage = () => {
       <div>
         <nav className="button-container">
           <h1 className="dashboard-header">
-            ・Welcome to your Dashboard・
+            ✎⎽Welcome to your Dashboard✐⎺
             <em>
               <b>{username}</b>
             </em>
-            ・
           </h1>
           <ContactButton />
           <HomeButton />

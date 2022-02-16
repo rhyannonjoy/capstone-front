@@ -15,7 +15,6 @@ const ContactForm = () => {
           type="text"
           required
         ></input>
-        <p></p>
         <label>Email:</label>
         <input
           className="contact-email-field"
@@ -26,7 +25,7 @@ const ContactForm = () => {
           type="text"
           required
         ></input>
-        <p></p>
+
         <label>Message:</label>
         <input
           className="contact-message-field"
@@ -37,7 +36,6 @@ const ContactForm = () => {
           type="text"
           required
         ></input>
-        <p></p>
         <div className="send-button-container">
           <SendButton />
         </div>
