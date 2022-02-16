@@ -38,7 +38,9 @@ const ContactForm = () => {
           required
         ></input>
         <p></p>
-        <SendButton />
+        <div className="send-button-container">
+          <SendButton />
+        </div>
       </form>
     </div>
   );

@@ -1,23 +1,44 @@
-
 .date-search-field {
   background-color: #f8f8f8;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-size: small;
-    height: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 5px;
-    margin-top: 3px;
-    padding: 12px 20px;
-    resize: none;
-    width: 230px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: small;
+  height: 48px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 12px 20px;
+  resize: none;
+  width: 200px;
 }
 
 .date-search-field:focus {
   border-color: #66afe9;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.search-icon {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  color: black;
+  display: grid;
+  height: 40px;
+  margin-top: 3px;
+  width: 43px;
+  place-items: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search-icon svg {
+  font-size: 40px;
+}
+
+.search-inputs {
+  display: flex;
 }
