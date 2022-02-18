@@ -3,21 +3,26 @@
 ## Introduction
 
 TechQ+A is a CRUD app that allows users to create, read, update & delete their tech questions.\
-With a microservice via Grammar Bot API, users can receive grammatical suggestions for their tech questions.\
+With a microservice via Grammar Bot API, users can receive grammatical suggestions for their tech questions.
 
 ## Demo
 <a style="float:right" href="https://www.youtube.com/watch?v=cNa3e-FoZFA" target="_blank">
-<img alt="Demo Video" width="800" src="https://i.ibb.co/vvFBBy1/vizlator.png" />
+<img alt="Demo Video" width="800" src="./src/images/techqa_diagram%202.png" />
 </a>
-
-<img src="./src/images/techqa_diagram%202.png" alt="TechQ+A Request-Response Cycle Diagram" style="height: 100px; width:100px;"/>
+[TechQ+A Sequence Diagram](https://whimsical.com/sequence-diagram-logging-in-24XmeLS8Keh8WeSAB2mkgj)
 
 ## Tech Stack
 
 Back-end: Python, Flask, PostgreSQL\
-Front-end: React\
+Front-end: React
 
-# Getting Started with Create React App
+## Get Started
+1. Clone this repository
+2. Install yarn with `yarn install`
+3. View with `yarn start`
+4. `npm` information below 
+
+## Create-React-App Information
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -87,3 +92,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Helpful React Tutorials
+[LogRocket Conditional Rendering](https://www.youtube.com/watch?v=9yRCByR3GEM)
+[PedroTech Search Bar](https://www.youtube.com/watch?v=x7niho285qs)
+[PedroTech React Router](https://www.youtube.com/watch?v=UjHT_NKR_gU)
+
+TechQ+A is developed by [Ada Developers Academy](https://adadevelopersacademy.org/) Cohort 16 Student - Rhyannon Joy Rodriguez as a capstone project in February 2022.<br>
+Designed by [Rhyannon Joy Rodriguez](https://www.rhyannonjoy.work/) 
