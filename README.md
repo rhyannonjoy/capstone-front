@@ -1,3 +1,19 @@
+# TechQ+A
+
+## Introduction
+
+TechQ+A is a CRUD app that allows users to create, read, update & delete their tech questions.\
+With a microservice via Grammar Bot API, users can receive grammatical suggestions for their tech questions.\
+
+## Demo
+<a style="float:right" href="https://www.youtube.com/watch?v=cNa3e-FoZFA" target="_blank">
+</a>
+
+## Tech Stack
+
+Back-end: Python, Flask, PostgreSQL
+Front-end: React
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,4 +84,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# capstone-front
