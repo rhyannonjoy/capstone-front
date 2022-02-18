@@ -7,7 +7,7 @@ With a microservice via Grammar Bot API, users can receive grammatical suggestio
 
 ## Demo
 <a style="float:right" href="https://www.youtube.com/watch?v=cNa3e-FoZFA" target="_blank">
-<img alt="Demo Video" width="800" src="./src/images/techqa_diagram%202.png" />
+<img alt="Demo Video" width="800" src="https://main.d3scwtwktjjsss.amplifyapp.com/" />
 </a>
 [TechQ+A Sequence Diagram](https://whimsical.com/sequence-diagram-logging-in-24XmeLS8Keh8WeSAB2mkgj)
 
@@ -94,9 +94,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 ## Helpful React Tutorials
-[LogRocket Conditional Rendering](https://www.youtube.com/watch?v=9yRCByR3GEM)
-[PedroTech Search Bar](https://www.youtube.com/watch?v=x7niho285qs)
+[LogRocket Conditional Rendering](https://www.youtube.com/watch?v=9yRCByR3GEM)\
+[PedroTech Search Bar](https://www.youtube.com/watch?v=x7niho285qs)\
 [PedroTech React Router](https://www.youtube.com/watch?v=UjHT_NKR_gU)
 
-TechQ+A is developed by [Ada Developers Academy](https://adadevelopersacademy.org/) Cohort 16 Student - Rhyannon Joy Rodriguez as a capstone project in February 2022.<br>
-Designed by [Rhyannon Joy Rodriguez](https://www.rhyannonjoy.work/) 
+TechQ+A is developed by [Ada Developers Academy](https://adadevelopersacademy.org/)\ 
+Cohort 16 Student - [Rhyannon Joy Rodriguez](https://www.rhyannonjoy.work/) as a capstone project in February 2022.<br>
