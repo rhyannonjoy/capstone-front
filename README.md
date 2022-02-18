@@ -96,8 +96,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Helpful React Tutorials
 [LogRocket Conditional Rendering](https://www.youtube.com/watch?v=9yRCByR3GEM)\
-[PedroTech Search Bar](https://www.youtube.com/watch?v=x7niho285qs)\
-[PedroTech React Router](https://www.youtube.com/watch?v=UjHT_NKR_gU)
+[PedroTech React Router](https://www.youtube.com/watch?v=UjHT_NKR_gU)\
+[PedroTech Search Bar](https://www.youtube.com/watch?v=x7niho285qs)
 
-TechQ+A is developed by [Ada Developers Academy](https://adadevelopersacademy.org/)\ 
-Cohort 16 Student - [Rhyannon Joy Rodriguez](https://www.rhyannonjoy.work/) as a capstone project in February 2022.<br>
+TechQ+A is developed by [Ada Developers Academy](https://adadevelopersacademy.org/)
+Cohort 16 Student [Rhyannon Joy Rodriguez](https://www.rhyannonjoy.work/) as a capstone project in February 2022.
