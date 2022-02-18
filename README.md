@@ -7,12 +7,15 @@ With a microservice via Grammar Bot API, users can receive grammatical suggestio
 
 ## Demo
 <a style="float:right" href="https://www.youtube.com/watch?v=cNa3e-FoZFA" target="_blank">
+<img alt="Demo Video" width="800" src="https://i.ibb.co/vvFBBy1/vizlator.png" />
 </a>
+
+<img src="./src/images/techqa_diagram%202.png" alt="TechQ+A Request-Response Cycle Diagram" style="height: 100px; width:100px;"/>
 
 ## Tech Stack
 
-Back-end: Python, Flask, PostgreSQL
-Front-end: React
+Back-end: Python, Flask, PostgreSQL\
+Front-end: React\
 
 # Getting Started with Create React App
 
