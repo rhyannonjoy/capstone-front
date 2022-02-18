@@ -6,9 +6,8 @@ TechQ+A is a CRUD app that allows users to create, read, update & delete their t
 With a microservice via Grammar Bot API, users can receive grammatical suggestions for their tech questions.
 
 ## Demo
-<a style="float:right" href="https://www.youtube.com/watch?v=cNa3e-FoZFA" target="_blank">
-<img alt="Demo Video" width="800" src="https://main.d3scwtwktjjsss.amplifyapp.com/" />
-</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cNa3e-FoZFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 [TechQ+A Sequence Diagram](https://whimsical.com/sequence-diagram-logging-in-24XmeLS8Keh8WeSAB2mkgj)
 
 ## Tech Stack
